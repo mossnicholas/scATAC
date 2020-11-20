@@ -1,2 +1,2 @@
 # scATAC
-An assortment of analyses for CRISPR sciATAC datasets
+An assortment of analyses across several CRISPR sciATAC datasets
