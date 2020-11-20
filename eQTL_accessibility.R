@@ -8,7 +8,7 @@ library(ggplot2)
 
 # scATAC eQTL accessibility 
 # This script uses scATAC readouts to assess significant differential accessibility at disease eQTL sites, between 
-# CRISPR sgRNA-perturbed cell populations and non-targeting (control) cells
+# CRISPR sgRNA-perturbed cell populations and non-targeting (control) cell population
 ko_gene <- args[1] # pooled perturbed population to analyze
 sites_n <- args[2] # consider only top n sites by coverage across KO and NT cell populations
 outdir <- args[3] 
