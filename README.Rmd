@@ -13,9 +13,10 @@ Below is an example clustering approach of nucleosome profiles of PBMCs around t
 
 ```{r}
 library(data.table)
-source("https://github.com/mossnicholas/scATAC/blob/main/nucleosomes/scNuc_cluster.R")
+library(RCurl)
+source("https://raw.github.com/mossnicholas/scATAC/main/nucleosomes/scNuc_cluster.R")
 
-PBMC_SMC = fread("https://github.com/mossnicholas/scATAC/tree/main/PBMC_mats/PBMC_SMC_cov_mat.txt")
+PBMC_SMC = fread("https://raw.github.com/mossnicholas/scATAC/main/PBMC_mats/PBMC_SMC_cov_mat.txt")
 
 ClusterNucs(coverage_matrix = PBMC_SMC, 
             clusters = 6, 
@@ -29,7 +30,7 @@ Here is the heatmap corrosponding to cluster with the greatest proportion of cel
 
 
 ```{r}
-PBMC_cluster5 = fread("https://github.com/mossnicholas/scATAC/blob/main/PBMC_mats/PBMC_SMC_cluster5.txt")
+PBMC_cluster5 = fread("https://raw.github.com/mossnicholas/scATAC/main/PBMC_mats/PBMC_SMC_cluster5.txt")
 HeatmapNucs(coverage_matrix = PBMC_cluster5,
             subset = T)
 
@@ -38,7 +39,7 @@ HeatmapNucs(coverage_matrix = PBMC_cluster5,
 Then the heatmap of the cluster with 20.5% of cells - there is noticeable reduced definition of the +1 nucleosome. Prior to transcription-factor binding, this nucleosome is often depleted as part of an activation complex. 
 
 ```{r}
-PBMC_cluster6 = fread("https://github.com/mossnicholas/scATAC/blob/main/PBMC_mats/PBMC_SMC_cluster6.txt")
+PBMC_cluster6 = fread("https://raw.github.com/mossnicholas/scATAC/main/PBMC_mats/PBMC_SMC_cluster6.txt")
 HeatmapNucs(coverage_matrix = PBMC_cluster6,
             subset = F) 
 ```
