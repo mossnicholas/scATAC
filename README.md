@@ -3,11 +3,15 @@ Nucleosome Estimation
 
 ## Single-cell nucleosomes around TFBS
 
-Below is an example clustering approach of nucleosome profiles of PBMCs
-around the SMC3 TF motif. Here, it was found that six distinct clusters
-appropriately characterize nucleosomal states around the SMC3. Different
-clusters exhibit varying degrees of bimodal around the binding sites,
-representing cells in different regulatory transition phases.
+Below is an example K-means clustering approach of nucleosome profiles
+of PBMCs around the SMC3 TF motif, using scATAC readouts. Per motif and
+tissue type, it is necessary to experiment with different numbers of
+clusters, due to diverse cellular differentiation states and activation
+mechanisms at TF-binding sites.
+
+At the SMC3 motif, cells exhibit varying degrees of bimodality around
+the motif center, often correlating with downstream expression of that
+TFs’ target genes.
 
 ``` r
 library(data.table)
@@ -28,9 +32,9 @@ that compose each clusters. The heatmaps are ordered by NFR
 (nucleosomal-free region) score, a metric which assesses nucleosomal
 bimodality of an individual cell.
 
-Here is the heatmap corrosponding to cluster with the greatest
-proportion of cells (33.8%). Notice the strong bimodality of cells in
-this cluster
+Here are a couple heatmaps corrosponding to two of the most populated
+clusters above. Below, notice the strong, dense bimodal nucleosome
+arrangement surrounding the motif center.
 
 ``` r
 PBMC_cluster5 = fread("https://raw.github.com/mossnicholas/scATAC/main/PBMC_mats/PBMC_SMC_cluster5.txt")
@@ -40,10 +44,10 @@ HeatmapNucs(coverage_matrix = PBMC_cluster5,
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
-Then the heatmap of the cluster with 20.5% of cells - there is
-noticeable reduced definition of the +1 nucleosome. Prior to
-transcription-factor binding, this nucleosome is often depleted as part
-of an activation complex.
+The second example cluster has noticeablably reduced definition of the
++1 nucleosome, as most cells have fewer ATAC fragments in the 100 to 200
+bp range upstream. Prior to transcription-factor binding, this +1
+nucleosome is often depleted as part of an activation complex.
 
 ``` r
 PBMC_cluster6 = fread("https://raw.github.com/mossnicholas/scATAC/main/PBMC_mats/PBMC_SMC_cluster6.txt")
