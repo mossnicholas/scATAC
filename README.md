@@ -1,6 +1,9 @@
 Nucleosome Estimation
 ================
 
+These are expansions on the scNucleosome analyses from our paper, now on BioRxiv:
+https://www.biorxiv.org/content/10.1101/2020.11.20.390971v1
+
 ## Single-cell nucleosomes around TFBS
 
 Below is an example K-means clustering approach of nucleosome profiles
