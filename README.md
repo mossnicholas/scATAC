@@ -16,6 +16,8 @@ At the SMC3 motif, cells exhibit varying degrees of bimodality around
 the motif center, often correlating with downstream expression of that
 TFs’ target genes.
 
+Explore nucleosome estimations in other cell types at various TF motifs in the interactive module [here](https://mossnicholas.shinyapps.io/shiny/).
+
 ``` r
 library(data.table)
 library(RCurl)
