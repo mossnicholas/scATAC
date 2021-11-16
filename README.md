@@ -1,8 +1,8 @@
 Nucleosome Estimation
 ================
 
-These are expansions on the scNucleosome analyses from our paper, now on BioRxiv:
-https://www.biorxiv.org/content/10.1101/2020.11.20.390971v1
+These are expansions on the scNucleosome analyses from our paper, now in NBT:
+https://www.nature.com/articles/s41587-021-00902-x
 
 ## Single-cell nucleosomes around TFBS
 
